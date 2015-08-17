@@ -10,5 +10,11 @@ describe Fetchers do
   end
 
   it "fetches bike data" do
+    VCR.use_cassette('bikes/propel_advanced') do
+      FactoryGirl.reload
+      bike = FactoryGirl.create :bike
+      Fetchers::GiantBikeInfo.new(bike).fetch_and_update_bike_data
+      byebug
+    end
   end
 end

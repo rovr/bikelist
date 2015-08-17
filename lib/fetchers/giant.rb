@@ -1,44 +1,4 @@
 module Fetchers
-
-  class GiantIterator
-    class << self
-      def iterate_over_all_bike_types
-        bike_types_paths.each do |path|
-          Fetchers::Giant.new(bike_type_base_path+path).fetch_bikes
-        end
-      end
-
-      def bike_types_paths
-        ["/on-road/7/",
-          "/x-road/9/",
-          "/off-road/8/",
-          "/on-road/51/",
-          "/x-road/52/",
-          "/off-road/53/",
-          "/on-road/54/",
-          "/bmx/57/",
-          "/off-road/56/"]
-        end
-
-      def bike_type_base_path
-        '/en-us/bike-catalogue/series'
-      end
-    end
-  end
-
-  class GientBikeInfo
-    attr_reader :url
-
-    def initialize url
-      @url = url
-    end
-
-    def bike_page
-      @bike_page ||= agent.open(url)
-    end
-
-  end
-
   class Giant
     attr_reader :url
 
@@ -118,6 +78,90 @@ module Fetchers
 
     def base_url
       "http://www.giant-bicycles.com"
+    end
+  end
+
+
+  class GiantIterator
+    class << self
+      def iterate_over_all_bike_types
+        bike_types_paths.each do |path|
+          Fetchers::Giant.new(bike_type_base_path+path).fetch_bikes
+        end
+      end
+
+      def bike_types_paths
+        ["/on-road/7/",
+          "/x-road/9/",
+          "/off-road/8/",
+          "/on-road/51/",
+          "/x-road/52/",
+          "/off-road/53/",
+          "/on-road/54/",
+          "/bmx/57/",
+          "/off-road/56/"]
+        end
+
+      def bike_type_base_path
+        '/en-us/bike-catalogue/series'
+      end
+    end
+  end
+
+  class GiantBikeInfo
+    attr_reader :url, :bike
+
+    def initialize bike
+      @bike = bike
+      @url = bike.full_url
+    end
+
+    def fetch_and_update_bike_data
+      bike.update_attributes(data: bike_data) if bike_data.many?
+    end
+
+    def bike_data
+      { price: price,
+        image_urls: image_urls,
+        description: description,
+        specifications: specs}
+    end
+
+    def specs
+      specifications.map {|spec| process_specifications(spec)}
+    end
+
+    def process_specifications spec
+      heading = spec.search('.heading').text
+      specs = spec.search('tr').each_with_object({}) do |tr, hash|
+        value = tr.children.search('td').try(:text)
+        value.blank? ? next : hash[tr.children.search('th').text] = value
+      end
+      {heading => specs}
+    end
+
+    def specifications
+      bike_page.search('.bike-specifications')
+    end
+
+    def image_urls
+      bike_page.images.select {|i| i.src.match(/_generated_us/)}.uniq(&:src).map(&:src)
+    end
+
+    def description
+      bike_page.search(".content").text
+    end
+
+    def price
+      bike_page.search(".price").text
+    end
+
+    def bike_page
+      @bike_page ||= agent.get(url)
+    end
+
+    def agent
+      @agent ||= Mechanize.new
     end
   end
 end

@@ -4,8 +4,7 @@ require 'rails/test_help'
 require 'vcr'
 
 class ActiveSupport::TestCase
-  # Setup all fixtures in test/fixtures/*.yml for all tests in alphabetical order.
-  fixtures :all
+  config.include FactoryGirl::Syntax::Methods
 
   VCR.configure do |c|
     c.cassette_library_dir = 'test/fixtures/vcr'
