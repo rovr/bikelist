@@ -1,0 +1,28 @@
+= form_for @bike, :html => { :class => 'form-horizontal' } do |f|
+  .control-group
+    = f.label :name, :class => 'control-label'
+    .controls
+      = f.text_field :name, :class => 'text_field'
+  .control-group
+    = f.label :year, :class => 'control-label'
+    .controls
+      = f.text_field :year, :class => 'text_field'
+  .control-group
+    = f.label :data, :class => 'control-label'
+    .controls
+      = f.text_field :data, :class => 'text_field'
+  .control-group
+    = f.label :type_id, :class => 'control-label'
+    .controls
+      = f.text_field :type_id, :class => 'text_field'
+  .control-group
+    = f.label :url, :class => 'control-label'
+    .controls
+      = f.text_field :url, :class => 'text_field'
+  .control-group
+    = f.label :brand_id, :class => 'control-label'
+    .controls
+      = f.text_field :brand_id, :class => 'text_field'
+  .form-actions
+    = f.submit nil, :class => 'btn btn-primary'
+    = link_to t('.cancel', :default => t("helpers.links.cancel")), bikes_path, :class => 'btn'
