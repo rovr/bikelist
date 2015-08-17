@@ -7,17 +7,18 @@ module Fetchers
     end
 
     def fetch_bikes
+      bike_info
       byebug
     end
 
     def bike_info
-      bike_links.each do |name, link|
-        agent.get(bike_info_url(link))
+      @bike_info ||= bike_links[16..-1].first(3).map do |bike|
+        TrekBike.new bike.first[0], bike.first[1]
       end
     end
 
     def bike_links
-      @bike_links ||= year_list.links.map {|l| {l.text => l.href.gsub(/\#/, '')[1..-2]} if l.href.try :match, /\/bikes\//}
+      @bike_links ||= year_list.links.map {|l| {l.text => l.href.gsub(/\#/, '')[1..-2]} if l.href.try(:match, /\/bikes\//) && l.href.length > 13}.compact
     end
 
     def year_list
@@ -35,5 +36,16 @@ module Fetchers
     def agent
       @agent ||= Mechanize.new
     end
+  end
+
+  class TrekBike
+    attr_reader :name, :body
+
+    def initialize name, path
+      @name = name
+      @body = body
+      @path = path
+    end
+
   end
 end

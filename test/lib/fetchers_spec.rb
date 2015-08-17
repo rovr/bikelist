@@ -3,6 +3,8 @@ require "minitest/autorun"
 
 describe Fetchers do
   it "works" do
-    Fetchers.fetch_bikes
+    VCR.use_cassette('bikes/giant') do
+      Fetchers.fetch_giant
+    end
   end
 end
