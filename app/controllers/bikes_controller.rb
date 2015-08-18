@@ -4,7 +4,7 @@ class BikesController < ApplicationController
   # GET /bikes
   # GET /bikes.json
   def index
-    @bikes = Bike.includes(:type, :brand).search(params[:q]).limit(10)
+    @bikes = Bike.includes(:type, :brand).search(params[:q]).page(params[:page])
   end
 
   # GET /bikes/1
