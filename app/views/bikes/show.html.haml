@@ -26,8 +26,8 @@
     - @bike.data['specifications'].each do |data|
       %tbody
         %tr.heading
-          %th= data.keys.first
-        - data.values.first.each do |value|
+          %th= data.try(:keys).try(:first) || data.try(:first)
+        - (data.try(:values).try(:first) || data.second).each do |value|
           %tr
             %th= value[0]
             %td= value[1]

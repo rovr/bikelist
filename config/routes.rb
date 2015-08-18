@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   resources :bikes
-  resources :brands, :types
+  resources :brands, :types, only: [:show, :index]
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
