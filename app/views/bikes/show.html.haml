@@ -1,31 +1,37 @@
 - model_class = Bike
 .page-header
-  %h1=t '.title', :default => model_class.model_name.human.titleize
+  %h1= @bike.full_name
 
-%p
-  %strong= model_class.human_attribute_name(:name) + ':'
-  %br
-  = @bike.name
-%p
-  %strong= model_class.human_attribute_name(:year) + ':'
-  %br
-  = @bike.year
-%p
-  %strong= model_class.human_attribute_name(:data) + ':'
-  %br
-  = @bike.data
-%p
-  %strong= model_class.human_attribute_name(:type_id) + ':'
-  %br
-  = @bike.type_id
-%p
-  %strong= model_class.human_attribute_name(:url) + ':'
-  %br
-  = @bike.url
-%p
-  %strong= model_class.human_attribute_name(:brand_id) + ':'
-  %br
-  = @bike.brand_id
+
+.table-responsive
+  %table.table.table-hover
+    %tbody
+      %tr
+        %th Images
+        %td= @bike.data['image_urls']
+      %tr
+        %th Official Site Url:
+        %td= link_to @bike.name, @bike.full_url
+      %tr
+        %th Dealer's price:
+        %td= @bike.data['price']
+      %tr
+        %th Description
+        %td= @bike.data['description']
+
+
+.table-responsive
+  %h2 Specifications
+  %table.table.table-hover
+    - @bike.data['specifications'].each do |data|
+      %tbody
+        %tr.heading
+          %th= data.keys.first
+        - data.values.first.each do |value|
+          %tr
+            %th= value[0]
+            %td= value[1]
+
 
 .form-actions
   = link_to t('.back', :default => t("helpers.links.back")), bikes_path, :class => 'btn'
