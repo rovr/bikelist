@@ -5,12 +5,12 @@ class TypesController < ApplicationController
   end
 
   def show
-    @bikes = @type.bikes
+    @bikes = @type.bikes.includes(:type, :brand).search(params[:q]).page(params[:page])
     render template: 'bikes/index'
   end
 
   private
     def set_type
-      @type = Type.find(params[:id])
+      @type = Type.friendly.find(params[:id])
     end
 end

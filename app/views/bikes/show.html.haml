@@ -1,39 +1,40 @@
-- model_class = Bike
-.page-header
-  %h1= @bike.full_name
+- @title = "#{@bike.brand.name} #{@bike.name} :: Best Price & Reviews"
+.row
+  .col-md-6
+    = image_tag('http://placehold.it/700x400', class: 'img-responsive')
+  .col-md-6
+    %h1
+      =@bike.full_name
+    %h3
+      %span.text-right.price=@bike.data['price']
+    %p= @bike.data['image_urls']
+    %p= @bike.data['description']
+.row
+  .col-md-6
 
 
-.table-responsive
-  %table.table.table-hover
-    %tbody
-      %tr
-        %th Images
-        %td= @bike.data['image_urls']
-      %tr
-        %th Official Site Url:
-        %td= link_to @bike.name, @bike.full_url
-      %tr
-        %th Dealer's price:
-        %td= @bike.data['price']
-      %tr
-        %th Description
-        %td= @bike.data['description']
-
-
-.table-responsive
-  %h2 Specifications
-  %table.table.table-hover
-    - @bike.data['specifications'].each do |data|
-      %tbody
-        %tr.heading
-          %th= data.try(:keys).try(:first) || data.try(:first)
-        - (data.try(:values).try(:first) || data.second).each do |value|
+.row
+  .col-md-1
+  .col-md-10
+    .table-responsive
+      %h2="#{@bike.name} Reviews & Links"
+      %table.table.table-hover
+        %tbody
           %tr
-            %th= value[0]
-            %td= value[1]
-
-
-.form-actions
-  = link_to t('.back', :default => t("helpers.links.back")), bikes_path, :class => 'btn'
-  = link_to t('.edit', :default => t("helpers.links.edit")), edit_bike_path(@bike), :class => 'btn'
-  = link_to t('.destroy', :default => t("helpers.links.destroy")), bike_path(@bike), :method => "delete", :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) }, :class => 'btn btn-danger'
+            %td= link_to "Manufacturer Website", @bike.full_url
+          %tr
+            %td= link_to "Bicycling.com", "http://gearfinder.bicycling.com/gearfinderSearch?gsearch=#{@bike.name}"
+          %tr
+            %td= link_to "Youtube", "https://www.youtube.com/results?search_query=#{@bike.name}"
+    .table-responsive
+      %h2 Specifications
+      %table.table.table-hover
+        - @bike.data['specifications'].each do |data|
+          %tbody
+            %tr.heading
+              %th= data.try(:keys).try(:first) || data.try(:first)
+            - (data.try(:values).try(:first) || data.second).each do |value|
+              %tr
+                %th= value[0]
+                %td= value[1]
+  .col-md-1

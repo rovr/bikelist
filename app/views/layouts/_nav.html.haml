@@ -11,5 +11,6 @@
   = menu_group pull: :right do
     = menu_item "About Us", '/about'
     = menu_item "Contact", '/contact'
-  = form_tag bikes_path, :class => "navbar-search pull-right", :method => :get do
-    = text_field_tag :q, params[:q], :class => "search-query span3", :placeholder => "Search"
+  = form_tag bikes_path, :class => "navbar-form pull-right", role: 'search', :method => :get do
+    .form_group
+      = text_field_tag :q, params[:q], :class => "form-control", :placeholder => "Search"

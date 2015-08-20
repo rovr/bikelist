@@ -1,8 +1,5 @@
-%tr
-  %td= link_to bike.name, bike_path(bike)
-  %td= bike.data['price']
-  %td= bike.brand.name
-  %td= bike.data['description']
-  %td
-    = link_to t('.edit', :default => t("helpers.links.edit")), edit_bike_path(bike), :class => 'btn btn-mini'
-    = link_to t('.destroy', :default => t("helpers.links.destroy")), bike_path(bike), :method => :delete, :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) }, :class => 'btn btn-mini btn-danger'
+.col-md-4.product-item
+  %a{href: bike_path(bike)}
+    = image_tag('http://placehold.it/700x400', class: 'img-responsive')
+    %h3= bike.full_name
+    %p=  bike.data['description'].truncate(120)

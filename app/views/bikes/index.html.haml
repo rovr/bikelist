@@ -1,16 +1,11 @@
-- model_class = Bike
-.page-header
-  %h1= "#{@brand.try(:name) || @type.try(:name) || ''} Bikes"
-%table.table.table-striped
-  %thead
-    %tr
-      %th Bike
-      %th Price
-      %th Brand
-      %th Description
-      %th=t '.actions', :default => t("helpers.actions")
-  %tbody
-    = render @bikes
-= paginate @bikes
+- @title = "#{params[:q]} #{@brand.try(:name) || @type.try(:name) || ''} Bikes :: Best Price & Reviews"
+.row
+  .col-md-12
+    .page-header
+      %h1= "#{@brand.try(:name) || @type.try(:name) || ''} Bikes"
+.row
+  =render @bikes
 
-= link_to t('.new', :default => t("helpers.links.new")), new_bike_path, :class => 'btn btn-primary'
+.row.text-center
+  .col-md-12
+    = paginate @bikes

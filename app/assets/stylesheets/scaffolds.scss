@@ -27,11 +27,6 @@ a {
   &:visited {
     color: #666;
   }
-
-  &:hover {
-    color: #fff;
-    background-color: #000;
-  }
 }
 
 th {
@@ -58,6 +53,14 @@ div {
   padding: 2px;
   background-color: red;
   display: table;
+}
+
+.product-item {
+  margin-bottom: 40px;
+  min-height: 450px;
+  h3 {
+    min-height: 50px;
+  }
 }
 
 #error_explanation {
