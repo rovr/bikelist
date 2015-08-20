@@ -1,5 +1,5 @@
 module Fetchers
-  class GT
+  class GT < BikeFetcher
     attr_reader :url, :year, :type
 
     def initialize url = nil
@@ -38,10 +38,6 @@ module Fetchers
 
     ## Helpers ##
 
-    def agent
-      @agent ||= Mechanize.new
-    end
-
     def base_url
       "http://www.gtbicycles.com"
     end
@@ -66,24 +62,9 @@ module Fetchers
     end
   end
 
-  class GTBikeInfo
-    attr_reader :url, :bike
+  class GTBikeInfo < DetailFetcher
 
-    def initialize bike
-      @bike = bike
-      @url = bike.full_url
-    end
-
-    def fetch_and_update_bike_data
-      bike.update_attributes(data: bike_data) if bike_data.many?
-    end
-
-    def bike_data
-      { price: price,
-        image_urls: image_urls,
-        description: description,
-        specifications: specs}
-    end
+    private
 
     def specs
       process_specifications(specifications)
@@ -116,14 +97,6 @@ module Fetchers
 
     def price
       bike_page.search("#product-info .regular-price").text.strip
-    end
-
-    def bike_page
-      @bike_page ||= agent.get(url)
-    end
-
-    def agent
-      @agent ||= Mechanize.new
     end
   end
 end

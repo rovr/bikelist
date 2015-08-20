@@ -1,5 +1,5 @@
 module Fetchers
-  class Giant
+  class Giant < BikeFetcher
     attr_reader :url
 
     def initialize url = nil
@@ -27,10 +27,6 @@ module Fetchers
 
 
     ## Get all bike links ##
-
-    def bike_type_id
-      bike_type_id ||= Type.find_or_create_by(name: bike_type_name).id
-    end
 
     def brand_id
       brand_id ||= Brand.find_or_create_by(name: "Giant").id
@@ -72,10 +68,6 @@ module Fetchers
 
     ## Helpers ##
 
-    def agent
-      @agent ||= Mechanize.new
-    end
-
     def base_url
       "http://www.giant-bicycles.com"
     end
@@ -108,24 +100,9 @@ module Fetchers
     end
   end
 
-  class GiantBikeInfo
-    attr_reader :url, :bike
+  class GiantBikeInfo < DetailFetcher
 
-    def initialize bike
-      @bike = bike
-      @url = bike.full_url
-    end
-
-    def fetch_and_update_bike_data
-      bike.update_attributes(data: bike_data) if bike_data.many?
-    end
-
-    def bike_data
-      { price: price,
-        image_urls: image_urls,
-        description: description,
-        specifications: specs}
-    end
+    private
 
     def specs
       specifications.map {|spec| process_specifications(spec)}
@@ -154,14 +131,6 @@ module Fetchers
 
     def price
       bike_page.search(".price").text
-    end
-
-    def bike_page
-      @bike_page ||= agent.get(url)
-    end
-
-    def agent
-      @agent ||= Mechanize.new
     end
   end
 end

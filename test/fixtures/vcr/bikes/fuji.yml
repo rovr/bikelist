@@ -1,0 +1,343 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://www.fujibikes.com/archive/archivebikes
+    body:
+      encoding: US-ASCII
+      string: modelyear=2015&category=1
+    headers:
+      Accept-Encoding:
+      - gzip,deflate,identity
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Mechanize/2.7.3 Ruby/2.2.2p95 (http://github.com/sparklemotion/mechanize/)
+      Accept-Charset:
+      - ISO-8859-1,utf-8;q=0.7,*;q=0.7
+      Accept-Language:
+      - en-us,en;q=0.5
+      Host:
+      - www.fujibikes.com
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Content-Length:
+      - '25'
+      Connection:
+      - keep-alive
+      Keep-Alive:
+      - 300
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Apache/2.2.3 (Red Hat)
+      X-Powered-By:
+      - PHP/5.3.3
+      Content-Type:
+      - text/html; charset=UTF-8
+      Vary:
+      - Accept-Encoding
+      Content-Encoding:
+      - gzip
+      Expires:
+      - Thu, 20 Aug 2015 16:08:59 GMT
+      Cache-Control:
+      - max-age=0, no-cache, no-store
+      Pragma:
+      - no-cache
+      Date:
+      - Thu, 20 Aug 2015 16:08:59 GMT
+      Content-Length:
+      - '1263'
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - fuji_session=a%3A4%3A%7Bs%3A10%3A%22session_id%22%3Bs%3A32%3A%226097f9042ff01687cf3de117a9e418c7%22%3Bs%3A10%3A%22ip_address%22%3Bs%3A13%3A%2261.91.165.164%22%3Bs%3A10%3A%22user_agent%22%3Bs%3A50%3A%22Mechanize%2F2.7.3+Ruby%2F2.2.2p95+%28http%3A%2F%2Fgithub.com%2Fs%22%3Bs%3A13%3A%22last_activity%22%3Bs%3A10%3A%221440086938%22%3B%7D6d3b133c7f5cec306531c19d73c5081a;
+        expires=Sat, 19-Aug-2017 16:08:58 GMT; path=/
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        H4sIAAAAAAAAAN2c32/jRBDHnw+J/8EScHsnQWN7f8VHUnQqFCGdAJEi8Yac
+        ZHNZmtiR4xxXIf537CQl62TbWTMSD9On1Pnuajuf7MzOzDajPLLzMZvae2OL
+        RcnFkLNoWZnFmC3revNmMMir2dJ+MFeL3R+2lW2vZuX68enhwWa5+WZTlfNm
+        pnaCl+3rIl+b8duZiVLxcl3OzerB5NU4jRPJojqv3pt6zH6frvLinl0fZKNB
+        fj2aVoPrF6PtrLKb+jr6/BX7rLO011eLvJg9TMuPr/769JMXzQ/7087rJWtf
+        vol0HH95fLw09v2yZvvHLIu/YIc3ouaH5bu6nMzylWHtr1GjqKudcQR1lRdb
+        W9uy+KFg+xkW+dywx7lPb/+0q33vP2zMcUXMLqrGEmz/zt+vvx4Njn/b6MLw
+        KdbwadfwSsZBlm90sOlTyqbXMdL0OnZMvyqXeZRcJbDxH5Wg+ZsFEjZ/qpDm
+        T5Vr/jpf2yqUwEkMQmiWSRmCxkLQHghpHwhpCARNGkKGhZB5Icg+ECQMIaMM
+        gWOjAY+9EHQfCBqEwEnHBJ1gQ3LigXDzW+vpo2/tdhYOwxkEB+qENBTsEVWn
+        T0Hh/wUKD4RC+vCaSmzMkB4ok3fhLCbv4IghKSPQArsvxAnBTVVut+FuqiuH
+        94IgDQK7F7S8BBHomrpyGATtHYFN6bS6BCH7gZCBIEindRKbUUgno7i1hdnW
+        4b7pTA+ikKTzCoXNK1TsQRHonc70IApFOrtQ2OxCJRcoQkodJykMgHQmobBd
+        BsU9AHg4AA4DIN1tEFgAwgHwfbPC6LYs5uXe19+AGM4HgDAEbRjY/EGIJ2Dw
+        vjB4CAzSOYTAHl2F8sJI+8JIw2CQPr4KbFdC6CdgyL4wZAgM0t0JhXVTynFT
+        P5ZVI44mzUpbMwS16zxj4DBO2VkpgSx4NBP870jaRdNFIhS2BqWeRQKfcT1j
+        4F1CGwk2pCv1NJKQvM8zBkZCOrArbGBX+jkk/XdJUEpIO7wPsUiGzyGB7yB4
+        xsBIhpSRcGz1ljvV21/K3TS3H4PCuqOFLyKQrtoKbNVWxD4EsINytHDeQbpa
+        K7DVWpH4EMAOydHCCEjXawXWEQnHEU02ZVXbRXgf6XwADIO0S5LY/SATH4zA
+        9ur5ALirR3pnSOydKJlewgjJKRwtjID0DSiJ7WVI7kMAh2hHCyMg3cGQ2NKg
+        FD4EcIh2tDACyqVAwbGOiLuOaHIXlCccdXCOQNoBcawD4rxr+iD/f9DBpift
+        eDjW8XBxbvoAv3/Qwaan7XCwhW7uFLonu01l1ibM6Zy0MALShW2OLWxzdYkg
+        yPmctDAC0oVsji1kc+1DEOCETloYAenC9RCbDw+dfPiuymf3oPH3Kvi/pkln
+        vhr7ydf6zOzRdytbmzDjH7Tw7W7Kn3wlkC2bZgIvgui2XcDW1H1Y/DsIvgBA
+        ummjsbVSnZ1D+bkqo18nbwNpHNXw3qBcJZXYkoR0SxJ37QrLws6CDqgdNYRB
+        ki5LSInMEpoJ/BjgE1JHDWOgnClIicwUmgl8GEJyhY4axkA5W5ASeWZqJvBj
+        6LMbAjKGdqGUMSBDtJSZHwP8HQ8dNYyBcohWGRJDM4EfQ9YLQwYeWDPKGCS2
+        fybd/tnJsAFfIeCK4b1AuZCtsPeMlHvPyLXrV31yuctRcDJH6e7RP7Hh090P
+        UQAA
+    http_version: 
+  recorded_at: Thu, 20 Aug 2015 16:09:21 GMT
+- request:
+    method: post
+    uri: http://www.fujibikes.com/archive/archivebikes
+    body:
+      encoding: US-ASCII
+      string: modelyear=2015&category=10
+    headers:
+      Accept-Encoding:
+      - gzip,deflate,identity
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Mechanize/2.7.3 Ruby/2.2.2p95 (http://github.com/sparklemotion/mechanize/)
+      Accept-Charset:
+      - ISO-8859-1,utf-8;q=0.7,*;q=0.7
+      Accept-Language:
+      - en-us,en;q=0.5
+      Cookie:
+      - fuji_session=a%3A4%3A%7Bs%3A10%3A%22session_id%22%3Bs%3A32%3A%226097f9042ff01687cf3de117a9e418c7%22%3Bs%3A10%3A%22ip_address%22%3Bs%3A13%3A%2261.91.165.164%22%3Bs%3A10%3A%22user_agent%22%3Bs%3A50%3A%22Mechanize%2F2.7.3+Ruby%2F2.2.2p95+%28http%3A%2F%2Fgithub.com%2Fs%22%3Bs%3A13%3A%22last_activity%22%3Bs%3A10%3A%221440086938%22%3B%7D6d3b133c7f5cec306531c19d73c5081a
+      Host:
+      - www.fujibikes.com
+      Referer:
+      - !ruby/object:URI::HTTP
+        scheme: http
+        user: 
+        password: 
+        host: www.fujibikes.com
+        port: 80
+        path: "/archive/archivebikes"
+        query: 
+        opaque: 
+        fragment: 
+        parser: &1 !ruby/object:URI::RFC3986_Parser
+          regexp:
+            :SCHEME: !ruby/regexp /\A[A-Za-z][A-Za-z0-9+\-.]*\z/
+            :USERINFO: !ruby/regexp /\A(?:%\h\h|[!$&-.0-;=A-Z_a-z~])*\z/
+            :HOST: !ruby/regexp /\A(?:(?<IP-literal>\[(?:(?<IPv6address>(?:\h{1,4}:){6}(?<ls32>\h{1,4}:\h{1,4}|(?<IPv4address>(?<dec-octet>[1-9]\d|1\d{2}|2[0-4]\d|25[0-5]|\d)\.\g<dec-octet>\.\g<dec-octet>\.\g<dec-octet>))|::(?:\h{1,4}:){5}\g<ls32>|\h{,4}::(?:\h{1,4}:){4}\g<ls32>|(?:(?:\h{1,4}:)?\h{1,4})?::(?:\h{1,4}:){3}\g<ls32>|(?:(?:\h{1,4}:){,2}\h{1,4})?::(?:\h{1,4}:){2}\g<ls32>|(?:(?:\h{1,4}:){,3}\h{1,4})?::\h{1,4}:\g<ls32>|(?:(?:\h{1,4}:){,4}\h{1,4})?::\g<ls32>|(?:(?:\h{1,4}:){,5}\h{1,4})?::\h{1,4}|(?:(?:\h{1,4}:){,6}\h{1,4})?::)|(?<IPvFuture>v\h+\.[!$&-.0-;=A-Z_a-z~]+))\])|\g<IPv4address>|(?<reg-name>(?:%\h\h|[!$&-.0-9;=A-Z_a-z~])*))\z/
+            :ABS_PATH: !ruby/regexp /\A\/(?:%\h\h|[!$&-.0-;=@-Z_a-z~])*(?:\/(?:%\h\h|[!$&-.0-;=@-Z_a-z~])*)*\z/
+            :REL_PATH: !ruby/regexp /\A(?:%\h\h|[!$&-.0-;=@-Z_a-z~])+(?:\/(?:%\h\h|[!$&-.0-;=@-Z_a-z~])*)*\z/
+            :QUERY: !ruby/regexp /\A(?:%\h\h|[!$&-.0-;=@-Z_a-z~\/?])*\z/
+            :FRAGMENT: !ruby/regexp /\A(?:%\h\h|[!$&-.0-;=@-Z_a-z~\/?])*\z/
+            :OPAQUE: !ruby/regexp /\A(?:[^\/].*)?\z/
+            :PORT: !ruby/regexp /\A[\x09\x0a\x0c\x0d ]*\d*[\x09\x0a\x0c\x0d ]*\z/
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Content-Length:
+      - '26'
+      Connection:
+      - keep-alive
+      Keep-Alive:
+      - 300
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Apache/2.2.3 (Red Hat)
+      X-Powered-By:
+      - PHP/5.3.3
+      Content-Length:
+      - '0'
+      Content-Type:
+      - text/html; charset=UTF-8
+      Expires:
+      - Thu, 20 Aug 2015 16:09:52 GMT
+      Cache-Control:
+      - max-age=0, no-cache, no-store
+      Pragma:
+      - no-cache
+      Date:
+      - Thu, 20 Aug 2015 16:09:52 GMT
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Thu, 20 Aug 2015 16:10:14 GMT
+- request:
+    method: post
+    uri: http://www.fujibikes.com/archive/archivebikes
+    body:
+      encoding: US-ASCII
+      string: modelyear=2015&category=7
+    headers:
+      Accept-Encoding:
+      - gzip,deflate,identity
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Mechanize/2.7.3 Ruby/2.2.2p95 (http://github.com/sparklemotion/mechanize/)
+      Accept-Charset:
+      - ISO-8859-1,utf-8;q=0.7,*;q=0.7
+      Accept-Language:
+      - en-us,en;q=0.5
+      Cookie:
+      - fuji_session=a%3A4%3A%7Bs%3A10%3A%22session_id%22%3Bs%3A32%3A%226097f9042ff01687cf3de117a9e418c7%22%3Bs%3A10%3A%22ip_address%22%3Bs%3A13%3A%2261.91.165.164%22%3Bs%3A10%3A%22user_agent%22%3Bs%3A50%3A%22Mechanize%2F2.7.3+Ruby%2F2.2.2p95+%28http%3A%2F%2Fgithub.com%2Fs%22%3Bs%3A13%3A%22last_activity%22%3Bs%3A10%3A%221440086938%22%3B%7D6d3b133c7f5cec306531c19d73c5081a
+      Host:
+      - www.fujibikes.com
+      Referer:
+      - !ruby/object:URI::HTTP
+        scheme: http
+        user: 
+        password: 
+        host: www.fujibikes.com
+        port: 80
+        path: "/archive/archivebikes"
+        query: 
+        opaque: 
+        fragment: 
+        parser: *1
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Content-Length:
+      - '25'
+      Connection:
+      - keep-alive
+      Keep-Alive:
+      - 300
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Apache/2.2.3 (Red Hat)
+      X-Powered-By:
+      - PHP/5.3.3
+      Content-Length:
+      - '0'
+      Content-Type:
+      - text/html; charset=UTF-8
+      Expires:
+      - Thu, 20 Aug 2015 16:10:12 GMT
+      Cache-Control:
+      - max-age=0, no-cache, no-store
+      Pragma:
+      - no-cache
+      Date:
+      - Thu, 20 Aug 2015 16:10:12 GMT
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Thu, 20 Aug 2015 16:10:33 GMT
+- request:
+    method: post
+    uri: http://www.fujibikes.com/archive/archivebikes
+    body:
+      encoding: US-ASCII
+      string: modelyear=2015&category=4
+    headers:
+      Accept-Encoding:
+      - gzip,deflate,identity
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Mechanize/2.7.3 Ruby/2.2.2p95 (http://github.com/sparklemotion/mechanize/)
+      Accept-Charset:
+      - ISO-8859-1,utf-8;q=0.7,*;q=0.7
+      Accept-Language:
+      - en-us,en;q=0.5
+      Cookie:
+      - fuji_session=a%3A4%3A%7Bs%3A10%3A%22session_id%22%3Bs%3A32%3A%226097f9042ff01687cf3de117a9e418c7%22%3Bs%3A10%3A%22ip_address%22%3Bs%3A13%3A%2261.91.165.164%22%3Bs%3A10%3A%22user_agent%22%3Bs%3A50%3A%22Mechanize%2F2.7.3+Ruby%2F2.2.2p95+%28http%3A%2F%2Fgithub.com%2Fs%22%3Bs%3A13%3A%22last_activity%22%3Bs%3A10%3A%221440086938%22%3B%7D6d3b133c7f5cec306531c19d73c5081a
+      Host:
+      - www.fujibikes.com
+      Referer:
+      - !ruby/object:URI::HTTP
+        scheme: http
+        user: 
+        password: 
+        host: www.fujibikes.com
+        port: 80
+        path: "/archive/archivebikes"
+        query: 
+        opaque: 
+        fragment: 
+        parser: *1
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Content-Length:
+      - '25'
+      Connection:
+      - keep-alive
+      Keep-Alive:
+      - 300
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Apache/2.2.3 (Red Hat)
+      X-Powered-By:
+      - PHP/5.3.3
+      Content-Type:
+      - text/html; charset=UTF-8
+      Vary:
+      - Accept-Encoding
+      Content-Encoding:
+      - gzip
+      Expires:
+      - Thu, 20 Aug 2015 16:10:22 GMT
+      Cache-Control:
+      - max-age=0, no-cache, no-store
+      Pragma:
+      - no-cache
+      Date:
+      - Thu, 20 Aug 2015 16:10:22 GMT
+      Content-Length:
+      - '1226'
+      Connection:
+      - keep-alive
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        H4sIAAAAAAAAAN2cX4/iNhDAn69Sv0Oktpc7qQLHxk5yha3ank6q2uoe2PfK
+        gFnSYxNkwl5p1e/esIAwjdmxO2/DExvGo+z8GM8/h7FOqsUknVWfTFUvGyEV
+        S5OVNctJumrbzbvhUNv5qnoyg+Xuj+ogth3Mm8fz1eOFzWrz/cY2i07TQcHr
+        w/taP5rJD7Nts961JskGWfK+2s5fPzYLs94bbSecZTJNWm0fTDtJf5+tdf0p
+        veutGA/13Xhmh3evxtu5rTbtXfL1m/Srqxt+O1jqer6fNX+++fvLL151r/Rz
+        tWhX6eHtuyRn7NvT5ZWpHlZt+nw5Ldk36fGDpHuletc207lem/TwZ9JJtHZn
+        HIHW6npbtVVT/1ynzxqWemHSs+7Lxx93re/z/cac7iitlrazT/r8yT9vvxsP
+        T//buIcjw+LIvDhENA4RiCMjjYNjcXAvDhlDQsIQOGkIAgtBeCHkMRByGIIg
+        DWGEhTDyQiijN6YycGMakcYhsTikBwcfZOEkOmEYgiQNQWEhKD+EZHofxaGT
+        h1Eo0ihyLIrci0LEcBAwhJw0hAILofBDiPQHEeQPBWEUSiBzpk6BDwWLwMAg
+        BIebpIwAWTt0CnwIRhEIRjACypWD4sgA3Sm4IPhR29rMzD6Bc6SLKAiAUw7L
+        iiPDcqfAByD5dRrBoJOGMVAOzIojA3OnwIMBzo0uojAA0uGYl1gApQ9AlB+I
+        ID8oKWMQyGZ3p8CDAe4jXUThgEy5va0Esr3dKfABiPKDPMQPBOW2tuLIZl6n
+        4ILhJ70xyW96DxI4C8KbEOXWneLI1l2noG/8kArZkYURUG7cKY4tzTi/QtBW
+        TzrE/Ac52PS0SzJsY4KLnukDv/wnURgA5baELJGpaKfAAWCb7bZtPtfhE//+
+        ErBVV5JOShk2KWXsJSAhuZF3FegnjHSqyrCpKsv8WAKPYvSXwEBIJ60MG7QZ
+        fwlIrJ+IcD8hHdAZNqAz4cMSMoq+koYxUA7rimFLOja6gSHOMY4LYBikSzyG
+        LfGY9MOAW65X0jAG0mUew45/mLqBIdYngnqvjPYoCJvmcifNfW/ma2314RZB
+        Do4sXPqRTmkFdhonnGncB/2XsUmmQPufBeGeK+kZnMBuRkL91/gBxzHOgrDx
+        SW8+GXb+ljlNjw9GtytjYdsf5UDTZ6TbGwJreuGY/peqDdlyjmLwd5624bFD
+        f1FcGz5guzmKwYYnPewvsKVY4ZRiH231oB+rQ2MOtL4jCyIoSBdgBbYAK6QP
+        AVx+ObIwAtLFl8B6gXC8YKrrambWIacfL6LwNkTaBwTWB4T0AQgpfa+kYQyU
+        /UAq7LxNOfnPtFqvmp1pYx6x9ayBD8dTzoxkjn3mOWc3kATOdjxrQCQ55daE
+        zLHPPefZDST5/0CSByKhPG+TOfbZ55zfQBL4zKdnDYyE8qxNllgvKR0vuW92
+        tqofQAwnOfiUBm1vwIbx3Anj91Y/GbuNCOK9FbAnkA7hBTaEF8yLIzCA91aA
+        OArS4Rtbb0u33naMGxi8eytgHKRrjgL7YHqhXsARctzStwiGQnkGIUtsPlVy
+        F4rRi5jw4YrDoZx2FoX9PZlS9EEEBw5XHAZB+cySLLG/KVOO+iBkHAgZCIJS
+        q/BfGn/FVwVOAAA=
+    http_version: 
+  recorded_at: Thu, 20 Aug 2015 16:10:44 GMT
+recorded_with: VCR 2.9.3

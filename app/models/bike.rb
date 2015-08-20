@@ -23,4 +23,8 @@ class Bike < ActiveRecord::Base
   def bicycling_review_path
     super && "http://gearfinder.bicycling.com"+super
   end
+
+  def video_id
+    super || all_videos.first[1]
+  end
 end

@@ -1,5 +1,5 @@
 module Fetchers
-  class Trek
+  class Trek < BikeFetcher
     attr_reader :year
 
     def initialize year = Date.today.year
@@ -8,7 +8,6 @@ module Fetchers
 
     def fetch_bikes
       bike_info
-      byebug
     end
 
     def bike_info
@@ -31,10 +30,6 @@ module Fetchers
 
     def bike_info_url bike_url
       "http://www.trekbikes.com/int/en/model/details/?url=#{bike_url}"
-    end
-
-    def agent
-      @agent ||= Mechanize.new
     end
   end
 

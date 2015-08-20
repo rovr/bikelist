@@ -5,6 +5,4 @@ $ ->
   $('#youtube_playlist tr').click ->
     youtube_id = $(this).data('youtube')
     video_url = "http://www.youtube.com/embed/#{youtube_id}"
-    console.log youtube_id
-    console.log video_url
     $('#youtube_videos iframe').attr('src', video_url)

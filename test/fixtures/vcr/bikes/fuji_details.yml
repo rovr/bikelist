@@ -1,0 +1,123 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://archive.fujibikes.com/archivebikes.php?modelyear=2015&prodid=3560&prodname=Absolute%201.1%20Disc
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip,deflate,identity
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Mechanize/2.7.3 Ruby/2.2.2p95 (http://github.com/sparklemotion/mechanize/)
+      Accept-Charset:
+      - ISO-8859-1,utf-8;q=0.7,*;q=0.7
+      Accept-Language:
+      - en-us,en;q=0.5
+      Host:
+      - archive.fujibikes.com
+      Connection:
+      - keep-alive
+      Keep-Alive:
+      - 300
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 20 Aug 2015 16:42:59 GMT
+      Server:
+      - Apache/2.0.64 (Unix)
+      Content-Length:
+      - '7802'
+      Keep-Alive:
+      - timeout=15, max=100
+      Content-Type:
+      - text/html
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: "<html>\n<head>\n<style>\n\tbody\n\t{\n\t\tmargin:0 0;\n\t}\n\t#container\n\t{\n\t\twidth:700px;\n\t}\n\t#head-print,
+        #head-print-page2\n\t{\n\t\theight:100px;\n\t}\n\t#head-print #logo-print,
+        #head-print-page2 #logo-print\n\t{\n\t\tfloat:left;\n\t}\n\t#head-print #bike-name-print,
+        #head-print-page2 #bike-name-print\n\t{\n\t\tfloat:left;\n\t\tfont-style:italic;\n\t\tpadding-right:
+        20px;\n\t\twidth:580px;\n\t}\n\t#head-print #bike-name-print h2, #head-print-page2
+        #bike-name-print h2\n\t{\n\t\ttext-align:right;\n\t\tpadding-top:30px;\n\t\tborder-bottom:1px
+        solid #cccccc;\n\t}\n\t#bike-name-print a\n\t{\n\t\ttext-decoration:none;\n\t\tfont-style:normal;\n\t\tfont-size:11px;\n\t\tcolor:#999999;\n\t\tpadding:
+        0px 5px;\n\t\tmargin-top:-10px;\n\t}\n\t#bike-name-print a:hover\n\t{\n\t\tcolor:#cccccc;\n\t}\n\t#bike-image-print\n\t{\n\t\twidth:700px;\t\n\t\ttext-align:center;\n\t}\n\t\n\ttable.specs\n\t{\n\t\twidth:680px;\n\t}\n\t\t.specs
+        th\n\t{\n\t\tbackground-color:#eeeeee;\n\t\tborder-bottom:1px dotted #999999;\n\t\tcolor:#000000;\n\t\tfont-size:0.7em;\n\t\ttext-align:center;\n\t}\n\t\n\t.specs
+        td\n\t{\n\t\tborder-bottom:1px dotted #999999;\n\t\tcolor:#000000;\n\t\tfont-size:0.7em;\n\t}\n\t\n\ttd#name\n\t{\n\t\tcolor:#000000;\n\t}\n\t\n\ttd#diag\n\t{\n\t\tcolor:red;\n\t\ttext-align:center;\n\t}\n\t\n\ttd#desc,
+        td#geosize\n\t{\n\t\tcolor:#888888;\n\t\tpadding-left:15px;\n\t}\n\t\n\t.specs
+        tr:hover\n\t{\n\t\tbackground-color:#eeeeee;\n\t}\n\t\n\t#head-print-page2\n\t{\n\t\tdisplay:none;\n\t}\n\t@media
+        print\n\t{\n\t/*#specs-print {page-break-after:always}*/\n\tinput {display:none}\n\t#bike-name-print
+        a{display:none}\n\t#head-print-page2{display:block}\n\t}\n</style>\n</head>\n<body>\n
+        \n<div id=\"container\">\n\t\t<title>Print Bike Page - 2015  Absolute 1.1
+        Disc</title>\n\t\t<div id=\"head-print\">\n\t\t\t<div id=\"logo-print\">\n\t\t\t\t<img
+        src=\"http://www.fujibike.com/images/fuji-print-logo.jpg\" alt=\"Fuji Logo\"></img>\n\t\t\t</div>\n\t\t\t<div
+        id=\"bike-name-print\">\n\t\t\t<h2>2015  Absolute 1.1 Disc</h2>\n\t\t\t<a
+        href=\"\" onclick=\"window.print()\" style=\"float: right;\">Print This Page</a>\n\t\t\t<br/>\n\t\t\t<a
+        href=\"http://archive.fujibikes.com/archivebikes.php?prodid=3560&prodname=Absolute
+        1.1 Disc\" style=\"float: right;\" target=\"_blank\">Open in New Window</a>\n\t\t\t</div>\n\t\t</div>\n\t\t<div
+        id=\"clear_both\" style=\"clear:both;padding:0px;\"><!-- empty --></div>\n\t\t\n\t\t<div
+        id=\"bike-image-print\">\n\t\t<img id=\"bikeimg\" alt=\"Bike Image\" width=\"400px\"
+        src=\"http://insideasi.fujibikes.com/downloads/bikes/Fuji/2015/absolute-11-disc/absolute-11-disc-main-photo-large.jpg\"\\><img
+        id=\"bikeimg\" alt=\"Bike Image\" width=\"400px\" src=\"http://insideasi.fujibikes.com/downloads/bikes/Fuji/2015/absolute-11-disc/absolute-11-disc-front-large.jpg\"\\><img
+        id=\"bikeimg\" alt=\"Bike Image\" width=\"400px\" src=\"http://insideasi.fujibikes.com/downloads/bikes/Fuji/2015/absolute-11-disc/absolute-11-disc-rear-large.jpg\"\\>\t\t</div>\n\t\t\n\t\t<div
+        id =\"specs-print\">\n\t\t<table class='specs'><tr> <th>SPECIFICATION</th>
+        <th>DESCRIPTION</th> </tr><tr><td id='name'>SIZES</td><td id='desc'>S (15\"),
+        S/M (17\"), M (19\"), M/L (21\"), L (23\")</td></tr><tr><td id='name'>COLOR(S)</td><td
+        id='desc'>Satin Black w/ Gloss Black and Gloss Citrus</td></tr><tr><td id='name'>MAIN
+        FRAME</td><td id='desc'>Fuji A2-SL custom butted alloy w/ 1 1/8\" semi-integrated
+        headtube, internal shift cable routing</td></tr><tr><td id='name'>REAR TRIANGLE</td><td
+        id='desc'>Fuji A2-SL alloy w/ post disc mount, cold-forged dropouts and replaceable
+        hanger </td></tr><tr><td id='name'>FORK</td><td id='desc'>FC-770 carbon blade,
+        alloy steerer w/ alloy dropouts </td></tr><tr><td id='name'>CRANKSET</td><td
+        id='desc'>Oval Concepts 520, forged 6066 arms, 50/34T</td></tr><tr><td id='name'>BOTTOM
+        BRACKET</td><td id='desc'>Oval, external, sealed bearing </td></tr><tr><td
+        id='name'>PEDALS</td><td id='desc'>Alloy platform</td></tr><tr><td id='name'>FRONT
+        DERAILLEUR</td><td id='desc'>Shimano Tiagra</td></tr><tr><td id='name'>REAR
+        DERAILLEUR</td><td id='desc'>Shimano Tiagra, 10-speed</td></tr><tr><td id='name'>SHIFTERS</td><td
+        id='desc'>Shimano Tiagra, Rapid Fire w/ optical gear display, 10-speed</td></tr><tr><td
+        id='name'>CASSETTE</td><td id='desc'>Shimano Tiagra, 12-30T, 10-speed</td></tr><tr><td
+        id='name'>CHAIN</td><td id='desc'>KMC X10 w/ MissingLink, 10-speed</td></tr><tr><td
+        id='name'>WHEELSET</td><td id='desc'>Vera Terra DPD22 rims, 32h, stainless
+        eyelets, alloy disc hubs, stainless round spokes</td></tr><tr><td id='name'>TIRES</td><td
+        id='desc'>Vera Helios, 700 x 25c, 30tpi w/ Phalanx flat protection</td></tr><tr><td
+        id='name'>BRAKE SET</td><td id='desc'>Tektro M290, hydrualic disc, 160mm/140mm
+        rotor</td></tr><tr><td id='name'>BRAKE LEVERS</td><td id='desc'>Tektro M290</td></tr><tr><td
+        id='name'>HEADSET</td><td id='desc'>FSA, 1 1/8\" semi-integrated, caged bearings</td></tr><tr><td
+        id='name'>HANDLEBAR</td><td id='desc'>Oval Concepts 200, 6061 alloy, 31.8mm,
+        5&deg; sweep, 0mm rise</td></tr><tr><td id='name'>STEM</td><td id='desc'>Oval
+        Concepts 313, 6061 3D-forged alloy, 31.8mm, +/-  7&deg;</td></tr><tr><td id='name'>TAPE/GRIP</td><td
+        id='desc'>Oval Concepts P600 SLO, paddle, single lock-on</td></tr><tr><td
+        id='name'>SADDLE</td><td id='desc'>Oval Concepts R300 w/ steel rails</td></tr><tr><td
+        id='name'>SEAT POST</td><td id='desc'>Oval Concepts 300, 3D-forged 6061 alloy,
+        27.2mm, double-bolt micro-adjust</td></tr><tr><td id='name'>FENDERS</td><td
+        id='desc'>N/A</td></tr><tr><td id='name'>HEADLIGHT</td><td id='desc'>N/A</td></tr><tr><td
+        id='name'>TAILLIGHT</td><td id='desc'>N/A</td></tr><tr><td id='name'>REAR
+        CARRIER</td><td id='desc'>N/A</td></tr><tr><td id='name'>OTHERS</td><td id='desc'>Rack
+        and fender mounts</td></tr><tr><td id='name'>WEIGHT, KG/LBS</td><td id='desc'>10.72kg/23.58lb</td></tr></table>\t\t\n\t\t\t\t\n\t\t<br><table
+        class='specs'><tr> <th>GEOMETRY</th></tr><tr><td id='name'>SIZE</td><td>S
+        </td><td>S/M </td><td>M </td><td>M/L </td><td>L </td><td></td><td></td><td></td><td></td><td></td></tr><tr><td
+        id='name'>SEAT TUBE, CENTER TO TOP </td><td>381</td><td>432</td><td>483</td><td>533</td><td>584</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td
+        id='name'>TOP TUBE, EFFECTIVE</td><td>533</td><td>549</td><td>574</td><td>599</td><td>625</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td
+        id='name'>HEAD TUBE</td><td>120</td><td>145</td><td>170</td><td>190</td><td>220</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td
+        id='name'>SEAT TUBE ANGLE </td><td>75</td><td>74</td><td>73</td><td>73</td><td>73</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td
+        id='name'>HEAD TUBE ANGLE </td><td>69</td><td>70</td><td>71</td><td>71</td><td>71</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td
+        id='name'>CHAINSTAY </td><td>440</td><td>440</td><td>440</td><td>440</td><td>440</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td
+        id='name'>WHEELBASE </td><td>1052</td><td>1053</td><td>1059</td><td>1084</td><td>1110</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td
+        id='name'>BOTTOM BRACKET HEIGHT </td><td>290</td><td>290</td><td>290</td><td>290</td><td>290</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td
+        id='name'>STANDOVER </td><td>731</td><td>768</td><td>805</td><td>839</td><td>878</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td
+        id='name'>STEM</td><td>100</td><td>100</td><td>110</td><td>110</td><td>110</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td
+        id='name'>HANDLEBAR WIDTH</td><td>600</td><td>600</td><td>600</td><td>600</td><td>600</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td
+        id='name'>CRANK </td><td>170</td><td>170</td><td>175</td><td>175</td><td>175</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td
+        id='name'>WHEEL SIZE</td><td>700</td><td>700</td><td>700</td><td>700</td><td>700</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td
+        id='name'>SEAT POST DIAMETER</td><td>27.2</td><td>27.2</td><td>27.2</td><td>27.2</td><td>27.2</td><td></td><td></td><td></td><td></td><td></td></tr></table>\t\t</div>\n\t\t<br/>\n\t\t\n\n</div>\n</body>\n</html>\n"
+    http_version: 
+  recorded_at: Thu, 20 Aug 2015 16:43:21 GMT
+recorded_with: VCR 2.9.3
