@@ -1,3 +1,27 @@
 // Place all the styles related to the bikes controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+#specs {
+  tbody {
+    border-top: none;
+  }
+
+  tbody:before {
+    content: "-";
+    display: block;
+    line-height: 2em;
+    color: transparent;
+  }
+
+  .heading th {
+    font-size: 18px;
+    color: #333;
+  }
+
+  th {
+    color: #7D7D7D;
+  }
+}
+
+

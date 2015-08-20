@@ -14,8 +14,7 @@
 
 
 .row
-  .col-md-1
-  .col-md-10
+  .col-md-12
     .table-responsive
       %h2="#{@bike.name} Reviews & Links"
       %table.table.table-hover
@@ -26,15 +25,14 @@
             %td= link_to "Bicycling.com", "http://gearfinder.bicycling.com/gearfinderSearch?gsearch=#{@bike.name}"
           %tr
             %td= link_to "Youtube", "https://www.youtube.com/results?search_query=#{@bike.name}"
-    .table-responsive
+    .table-responsive#specs
       %h2 Specifications
       %table.table.table-hover
         - @bike.data['specifications'].each do |data|
           %tbody
             %tr.heading
-              %th= data.try(:keys).try(:first) || data.try(:first)
+              %th{colspan: 2}= data.try(:keys).try(:first) || data.try(:first)
             - (data.try(:values).try(:first) || data.second).each do |value|
               %tr
                 %th= value[0]
                 %td= value[1]
-  .col-md-1
