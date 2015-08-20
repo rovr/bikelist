@@ -30,6 +30,8 @@ gem 'less-rails'
 gem 'twitter-bootstrap-rails', github: 'seyhunak/twitter-bootstrap-rails'
 gem 'kaminari'
 gem 'friendly_id', github: 'norman/friendly_id'
+gem 'carrierwave', github: 'carrierwaveuploader/carrierwave'
+gem 'mini_magick', require: false
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

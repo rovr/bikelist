@@ -1,6 +1,5 @@
-= nav_bar fixed: :top, brand: "Bike", responsive: true do
+= nav_bar fixed: :top, brand: "BikeList", responsive: true do
   = menu_group do
-    = menu_item "All Bikes", bikes_path
     = drop_down "Brands" do
       - Brand.all.each do |brand|
         = menu_item brand.name, brand_path(brand)
@@ -8,9 +7,6 @@
       - Type.all.each do |type|
         = menu_item type.name, type_path(type)
 
-  = menu_group pull: :right do
-    = menu_item "About Us", '/about'
-    = menu_item "Contact", '/contact'
   = form_tag bikes_path, :class => "navbar-form pull-right", role: 'search', :method => :get do
     .form_group
       = text_field_tag :q, params[:q], :class => "form-control", :placeholder => "Search"

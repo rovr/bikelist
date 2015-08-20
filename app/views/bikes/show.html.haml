@@ -1,30 +1,26 @@
 - @title = "#{@bike.brand.name} #{@bike.name} :: Best Price & Reviews"
 .row
   .col-md-6
-    = image_tag('http://placehold.it/700x400', class: 'img-responsive')
+    = image_tag(@bike.pics.first.image.url, height: 700, with: 400, class: 'img-responsive')
   .col-md-6
     %h1
       =@bike.full_name
     %h3
       %span.text-right.price=@bike.data['price']
-    %p= @bike.data['image_urls']
     %p= @bike.data['description']
-.row
-  .col-md-6
-
 
 .row
   .col-md-12
     .table-responsive
-      %h2="#{@bike.name} Reviews & Links"
+      %h2="#{@bike.name} Prices && Reviews & Links"
       %table.table.table-hover
         %tbody
           %tr
             %td= link_to "Manufacturer Website", @bike.full_url
-          %tr
-            %td= link_to "Bicycling.com", "http://gearfinder.bicycling.com/gearfinderSearch?gsearch=#{@bike.name}"
-          %tr
-            %td= link_to "Youtube", "https://www.youtube.com/results?search_query=#{@bike.name}"
+          - if @bike.bicycling_review_path?
+            %tr
+              %td
+                = link_to "Bicycling.com Reviews", @bike.bicycling_review_path
     .table-responsive#specs
       %h2 Specifications
       %table.table.table-hover
@@ -36,3 +32,16 @@
               %tr
                 %th= value[0]
                 %td= value[1]
+.row#youtube_videos
+  .col-md-8
+    .text-center
+      %h2="#{@bike.name} Youtube Reviews"
+      %iframe{src: "http://www.youtube.com/embed/#{@bike.video_id || @bike.all_videos.first[1]}", height: 480, width: 640, frameborder: 0, allowfullscreen: true}
+  .col-md-4
+    .table-responsive#youtube_playlist
+      %h5 Playlist
+      %table.table.table-hover
+        %tbody
+          - @bike.all_videos.each do |data|
+            %tr{data: {youtube: data[1]}}
+              %td= data[0]

@@ -1,6 +1,7 @@
 class Bike < ActiveRecord::Base
   belongs_to :brand
   belongs_to :type
+  has_many :pics
 
   include FriendlyId
   friendly_id :brand_and_name, use: :slugged
@@ -17,5 +18,9 @@ class Bike < ActiveRecord::Base
 
   def full_name
     "#{name} #{brand.name} #{year}"
+  end
+
+  def bicycling_review_path
+    super && "http://gearfinder.bicycling.com"+super
   end
 end

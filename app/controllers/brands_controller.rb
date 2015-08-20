@@ -1,9 +1,6 @@
 class BrandsController < ApplicationController
   before_action :set_brand, only: :show
 
-  def index
-  end
-
   def show
     @bikes = @brand.bikes.includes(:type, :brand).search(params[:q]).page(params[:page])
     render template: 'bikes/index'

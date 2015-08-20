@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150820090556) do
+ActiveRecord::Schema.define(version: 20150820114858) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -20,12 +20,15 @@ ActiveRecord::Schema.define(version: 20150820090556) do
     t.string   "name"
     t.integer  "year"
     t.json     "data"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",            null: false
+    t.datetime "updated_at",            null: false
     t.integer  "type_id"
     t.string   "url"
     t.integer  "brand_id"
     t.string   "slug"
+    t.string   "video_id"
+    t.json     "all_videos"
+    t.string   "bicycling_review_path"
     t.index ["brand_id"], name: "index_bikes_on_brand_id", using: :btree
     t.index ["type_id"], name: "index_bikes_on_type_id", using: :btree
   end
@@ -50,6 +53,14 @@ ActiveRecord::Schema.define(version: 20150820090556) do
     t.index ["sluggable_type"], name: "index_friendly_id_slugs_on_sluggable_type", using: :btree
   end
 
+  create_table "pics", force: :cascade do |t|
+    t.string   "image"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer  "bike_id"
+    t.index ["bike_id"], name: "index_pics_on_bike_id", using: :btree
+  end
+
   create_table "types", force: :cascade do |t|
     t.string   "name"
     t.datetime "created_at", null: false
@@ -59,4 +70,5 @@ ActiveRecord::Schema.define(version: 20150820090556) do
 
   add_foreign_key "bikes", "brands"
   add_foreign_key "bikes", "types"
+  add_foreign_key "pics", "bikes"
 end
