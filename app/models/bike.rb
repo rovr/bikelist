@@ -1,7 +1,7 @@
 class Bike < ActiveRecord::Base
   belongs_to :brand
   belongs_to :type
-  has_many :pics
+  has_many :pics, dependent: :destroy
 
   include FriendlyId
   friendly_id :brand_and_name, use: :slugged
