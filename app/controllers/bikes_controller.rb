@@ -16,6 +16,6 @@ class BikesController < ApplicationController
   end
 
   def set_bikes
-    @bikes = Bike.order("RANDOM()")
+    @bikes = Bike.random
   end
 end

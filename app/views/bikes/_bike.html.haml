@@ -1,5 +1,5 @@
 .col-md-4.product-item
   %a{href: bike_path(bike)}
-    = image_tag(bike.pics.first.try(:image).try(:grid).try(:url) || '/no-image.png', width: 360, height: 200, class: 'img-responsive')
+    = image_tag(first_image_url(bike), width: 360, height: 200, class: 'img-responsive')
     %h3= bike.full_name
     %p=  bike.data['description'].truncate(120)

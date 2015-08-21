@@ -1,53 +1,54 @@
-- @title = "#{@bike.brand.name} #{@bike.name} :: Best Price & Reviews"
-.row
-  .col-md-6
-    #gallery
-      .row
-      - @bike.pics.each_with_index do |pic, i|
-        %a{href: pic.image.url, class: image_col_size(i)}
-          =image_tag(pic.image.url, height: 700, with: 400, class: 'img-responsive', title: @bike.name)
-    :javascript
-      $('#gallery').photobox('a',{ time:0 });
-  .col-md-6
-    %h1
-      =@bike.full_name
-    %h3
-      %span.text-right.price=@bike.data['price']
-    %p= @bike.data['description']
+- @title = show_title
+- cache @bike do
+  .row
+    .col-md-6
+      #gallery
+        .row
+        - @bike.pics.each_with_index do |pic, i|
+          %a{href: pic.image.url, class: image_col_size(i)}
+            =image_tag(pic.image.url, height: 700, with: 400, class: 'img-responsive', title: @bike.name)
+      :javascript
+        $('#gallery').photobox('a',{ time:0 });
+    .col-md-6
+      %h1
+        =@bike.full_name
+      %h3
+        %span.text-right.price=@bike.data['price']
+      %p= @bike.data['description']
 
-.row
-  .col-md-12
-    .table-responsive
-      %h2="#{@bike.name} Prices && Reviews & Links"
-      %table.table.table-hover
-        %tbody
-          %tr
-            %td= link_to "Manufacturer Website", @bike.full_url
-          - if @bike.bicycling_review_path?
-            %tr
-              %td
-                = link_to "Bicycling.com Reviews", @bike.bicycling_review_path
-    .table-responsive#specs
-      %h2 Specifications
-      %table.table.table-hover
-        - @bike.data['specifications'].each do |data|
+  .row
+    .col-md-12
+      .table-responsive
+        %h2="#{@bike.name} Prices && Reviews & Links"
+        %table.table.table-hover
           %tbody
-            %tr.heading
-              %th{colspan: 2}= data.try(:keys).try(:first) || data.try(:first)
-            - (data.try(:values).try(:first) || data.second).each do |value|
+            %tr
+              %td= link_to "Manufacturer Website", @bike.full_url
+            - if @bike.bicycling_review_path?
               %tr
-                %th= value[0]
-                %td= value[1]
-.row#youtube_videos
-  .col-md-8
-    .text-center
-      %h2="#{@bike.name} Youtube Reviews"
-      %iframe{src: "http://www.youtube.com/embed/#{@bike.video_id}", height: 480, width: 640, frameborder: 0, allowfullscreen: true}
-  .col-md-4
-    .table-responsive#youtube_playlist
-      %h5 Playlist
-      %table.table.table-hover
-        %tbody
-          - @bike.all_videos.each do |data|
-            %tr{data: {youtube: data[1]}}
-              %td= data[0]
+                %td
+                  = link_to "Bicycling.com Review", @bike.bicycling_review_path
+      .table-responsive#specs
+        %h2 Specifications
+        %table.table.table-hover
+          - @bike.data['specifications'].each do |data|
+            %tbody
+              %tr.heading
+                %th{colspan: 2}= data.try(:keys).try(:first) || data.try(:first)
+              - (data.try(:values).try(:first) || data.second).each do |value|
+                %tr
+                  %th= value[0]
+                  %td= value[1]
+  .row#youtube_videos
+    .col-md-8
+      .text-center
+        %h2="#{@bike.name} Youtube Reviews"
+        %iframe{src: "http://www.youtube.com/embed/#{@bike.video_id}", height: 480, width: 640, frameborder: 0, allowfullscreen: true}
+    .col-md-4
+      .table-responsive#youtube_playlist
+        %h5 Playlist
+        %table.table.table-hover
+          %tbody
+            - @bike.all_videos.each do |data|
+              %tr{data: {youtube: data[1]}}
+                %td= data[0]

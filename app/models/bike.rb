@@ -7,6 +7,7 @@ class Bike < ActiveRecord::Base
   friendly_id :brand_and_name, use: :slugged
 
   scope :search, -> (q) {where("name @@ :q", q: q) if q}
+  scope :random, -> {order("RANDOM()")}
 
   def full_url
     brand.website+url
