@@ -1,8 +1,9 @@
 class BikesController < ApplicationController
   before_action :set_bike, only: :show
+  before_action :set_bikes, :load_bike_info, only: :index
+  include BikesLoader
 
   def index
-    @bikes = Bike.includes(:type, :brand).search(params[:q]).page(params[:page])
   end
 
   def show
@@ -12,5 +13,9 @@ class BikesController < ApplicationController
 
   def set_bike
     @bike = Bike.friendly.find(params[:id])
+  end
+
+  def set_bikes
+    @bikes = Bike.order("RANDOM()")
   end
 end
