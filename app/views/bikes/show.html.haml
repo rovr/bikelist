@@ -24,6 +24,8 @@
           %tbody
             %tr
               %td= link_to "Manufacturer Website", @bike.full_url
+            %tr
+              %td=link_to "Singletrackworld && Bikeradar && Mtbdirt Reviews and Discussions", "https://encrypted.google.com/search?hl=en&q=#{@bike.full_name}+site:www.mtbdirt.com.au+||+site:http:%2F%2Fsingletrackworld.com+||+site:http:%2F%2Fwww.bikeradar.com"
             - if @bike.bicycling_review_path?
               %tr
                 %td
