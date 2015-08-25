@@ -30,6 +30,22 @@
               %tr
                 %td
                   = link_to "Bicycling.com Review", @bike.bicycling_review_path
+
+  .row#youtube_videos
+    .col-md-8
+      %h2="#{@bike.name} Youtube Reviews"
+      %iframe{src: "http://www.youtube.com/embed/#{@bike.video_id}", height: 480, width: 640, frameborder: 0, allowfullscreen: true}
+    .col-md-4
+      .table-responsive#youtube_playlist
+        %h4 Playlist
+        %table.table.table-hover
+          %tbody
+            - @bike.all_videos.each do |data|
+              %tr{data: {youtube: data[1]}}
+                %td= data[0]
+
+  .row
+    .col-md-12
       .table-responsive#specs
         %h2 Specifications
         %table.table.table-hover
@@ -41,16 +57,3 @@
                 %tr
                   %th= value[0]
                   %td= value[1]
-  .row#youtube_videos
-    .col-md-8
-      .text-center
-        %h2="#{@bike.name} Youtube Reviews"
-        %iframe{src: "http://www.youtube.com/embed/#{@bike.video_id}", height: 480, width: 640, frameborder: 0, allowfullscreen: true}
-    .col-md-4
-      .table-responsive#youtube_playlist
-        %h5 Playlist
-        %table.table.table-hover
-          %tbody
-            - @bike.all_videos.each do |data|
-              %tr{data: {youtube: data[1]}}
-                %td= data[0]
